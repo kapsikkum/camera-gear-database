@@ -214,6 +214,9 @@ func fold(items []*item) []*item {
 			if r.Wikipedia == "" {
 				r.Wikipedia = it.Wikipedia
 			}
+			if r.CommonsFile == "" {
+				r.CommonsFile = it.CommonsFile // a photo of the family beats no photo
+			}
 		}
 		return true
 	})
