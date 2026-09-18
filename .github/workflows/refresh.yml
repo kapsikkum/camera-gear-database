@@ -18,7 +18,9 @@ jobs:
         with:
           go-version-file: go.mod
       - run: go vet ./...
-      - run: go run ./scrape -out . -brand canon
+      - run: go test ./...
+      - run: go run ./scrape -out .
+        timeout-minutes: 60
       - name: Commit changes
         run: |
           set -euo pipefail

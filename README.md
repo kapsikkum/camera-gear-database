@@ -1,8 +1,11 @@
 # Camera gear database
 
-An open database of camera bodies and lenses, with a picture of each, built for film photography apps.
-Canon first; other brands can follow the same shape. Film gear only: digital bodies and the
-crop-sensor lenses that will not mount on a 35mm camera (EF-S, EF-M, RF-S) are left out.
+An open database of film camera bodies and lenses, with a picture of each, built for film photography
+apps. Every brand Wikidata knows about — Canon, Nikon, Pentax, Minolta, Olympus, Hasselblad, Mamiya and
+the rest — with the film each model takes (35mm, 120, APS, sheet).
+
+Film gear only: digital bodies are left out, and so are lenses for mounts that never had film behind
+them (Canon RF, EF-S, EF-M, Nikon Z, Sony E, Micro Four Thirds, Fujifilm X and friends).
 
 Everything here is generated from [Wikidata](https://www.wikidata.org/) and English Wikipedia by the
 scraper in `scrape/`, so it can be rebuilt and kept current.
@@ -11,19 +14,22 @@ scraper in `scrape/`, so it can be rebuilt and kept current.
 
 | File | Rows |
 | --- | --- |
-| `data/canon/bodies.csv` | Canon film SLR bodies |
-| `data/canon/lenses.csv` | Canon lenses (FD, FL, R, EF, RF) |
-| `images/canon/*.jpg` | One photo per model, up to 900px wide |
+| `data/<brand>/bodies.csv` | That brand's film SLR bodies |
+| `data/<brand>/lenses.csv` | Its lenses |
+| `images/<brand>/*.jpg` | One photo per model, up to 700px wide |
 | `images/CREDITS.csv` | Author and licence of every image |
 
-**bodies.csv** — `slug, name, type, mount, introduced, image, wikidata, commons_file, wikipedia, source`
-where `type` is `SLR` (film) or `DSLR`.
+**bodies.csv** — `slug, name, brand, type, mount, film_format, introduced, image, wikidata,
+commons_file, wikipedia, source`
 
-**lenses.csv** — `slug, name, mount, focal_length_mm, max_aperture, introduced, filter_mm, weight_g,
-image, wikidata, commons_file, wikipedia, source`. Zooms give their range as `100-200`; `max_aperture`
-is the widest f-number, so `1.4` means f/1.4.
+**lenses.csv** — `slug, name, brand, mount, film_format, focal_length_mm, max_aperture, introduced,
+filter_mm, weight_g, image, wikidata, commons_file, wikipedia, source`. Zooms give their range as
+`100-200`; `max_aperture` is the widest f-number, so `1.4` means f/1.4.
 
-`slug` is a stable id made from the name. `source` says whether a row came from Wikidata or Wikipedia.
+`film_format` is `35mm`, `120`, `APS` or `sheet`, read off the model name and mount — a Pentax 6x7 or
+Mamiya 645 is medium format, everything else is assumed 35mm, so odd names (a Rollei 6008) can be
+wrong. `slug` is a stable id made from the name. `source` says whether a row came from Wikidata or
+Wikipedia.
 
 ## Where the data comes from
 
@@ -49,11 +55,11 @@ Manufacturer sites such as the Canon Camera Museum are linked to, never scraped.
 ## Rebuilding
 
 ```bash
-go run ./scrape -out . -brand canon
+go run ./scrape -out .
 ```
 
 ```bash
-go run ./scrape -out . -brand canon -skip-images
+go run ./scrape -out . -brand nikon -skip-images
 ```
 
 Images already on disk are kept, so a rebuild only fetches what's new. A monthly GitHub Action reruns the

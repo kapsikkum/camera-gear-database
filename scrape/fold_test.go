@@ -46,3 +46,55 @@ func TestFilmless(t *testing.T) {
 		}
 	}
 }
+
+func TestMakerName(t *testing.T) {
+	for label, want := range map[string]string{
+		"Canon Inc.": "Canon", "Nikon Corporation": "Nikon", "Asahi Optical Co., Ltd.": "Pentax",
+		"Victor Hasselblad AB": "Hasselblad", "Minolta": "Minolta", "Ernst Leitz GmbH": "Ernst Leitz",
+	} {
+		if got := makerName(label); got != want {
+			t.Errorf("%q: got %q, want %q", label, got, want)
+		}
+	}
+}
+
+func TestFilmFormat(t *testing.T) {
+	for _, c := range []struct {
+		it   item
+		want string
+	}{
+		{item{Name: "Canon AE-1", Brand: "Canon"}, "35mm"},
+		{item{Name: "Pentax 6x7", Brand: "Pentax"}, "120"},
+		{item{Name: "Pentax 645N", Brand: "Pentax"}, "120"},
+		{item{Name: "Hasselblad 500C", Brand: "Hasselblad"}, "120"},
+		{item{Name: "Mamiya Sekor 80mm f/2.8", Brand: "Mamiya", Kind: "lens"}, "120"},
+		{item{Name: "Canon EOS IX", Brand: "Canon"}, "APS"},
+		{item{Name: "Sinar p2", Brand: "Sinar"}, "sheet"},
+		{item{Name: "Nikon F601", Brand: "Nikon"}, "35mm"},
+	} {
+		if got := filmFormat(&c.it); got != c.want {
+			t.Errorf("%s: got %q, want %q", c.it.Name, got, c.want)
+		}
+	}
+}
+
+func TestFilmlessDropsJunk(t *testing.T) {
+	for _, c := range []struct {
+		it   item
+		want bool
+	}{
+		{item{Name: "Samsung Galaxy S21 Rear Main Camera", Kind: "lens", Brand: "Samsung"}, true},
+		{item{Name: "Olympus OM system", Kind: "body", Brand: "Olympus"}, true},
+		{item{Name: "Cooke Varotal 20-100mm T3.1", Kind: "lens", Brand: "Cooke"}, true},
+		{item{Name: "Minolta AF DT 18-70mm f/3.5-5.6 lens", Kind: "lens", Brand: "Minolta"}, true},
+		{item{Name: "Canon T60", Kind: "body", Brand: "Cosina"}, false}, // T60 is a film SLR, not a T-stop
+		{item{Name: "Olympus OM-1", Kind: "body", Brand: "Olympus"}, false},
+	} {
+		if got := filmless(&c.it); got != c.want {
+			t.Errorf("%s: got %v, want %v", c.it.Name, got, c.want)
+		}
+	}
+	if got := filmFormat(&item{Name: "Polaroid SX-70", Brand: "Polaroid"}); got != "instant" {
+		t.Errorf("Polaroid SX-70: %q", got)
+	}
+}

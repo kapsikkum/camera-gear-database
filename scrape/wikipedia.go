@@ -179,7 +179,7 @@ func canonBodies() ([]*item, error) {
 			if !strings.HasPrefix(name, "Canon") || len(name) > 40 {
 				continue
 			}
-			out = append(out, &item{Name: name, Kind: "body", Mounts: []string{mount}, Introduced: yearRe.FindString(text), Source: "wikipedia"})
+			out = append(out, &item{Name: name, Kind: "body", Brand: "Canon", Mounts: []string{mount}, Introduced: yearRe.FindString(text), Source: "wikipedia"})
 		}
 	}
 	return out, nil
@@ -265,7 +265,7 @@ func fdItems() ([]*item, error) {
 				if n == "" || len(row) < 3 || strings.EqualFold(n, cell(row, 0)) && distinctCells(row) < 3 {
 					continue
 				}
-				it := &item{Name: "Canon " + n, Kind: src.kind, Mounts: []string{src.mount}, Source: "wikipedia"}
+				it := &item{Name: "Canon " + n, Kind: src.kind, Brand: "Canon", Mounts: []string{src.mount}, Source: "wikipedia"}
 				it.Introduced = yearRe.FindString(cell(row, year))
 				if m := apertureRe.FindStringSubmatch(cell(row, aperture)); m != nil {
 					it.Aperture = []string{m[1]}
