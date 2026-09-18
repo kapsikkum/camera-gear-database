@@ -97,6 +97,11 @@ func main() {
 	}
 	for _, it := range items {
 		it.Format = filmFormat(it)
+		if len(it.Mounts) == 0 {
+			if m := guessMount(it); m != "" {
+				it.Mounts = []string{m}
+			}
+		}
 	}
 	slices.SortFunc(items, func(a, b *item) int { return strings.Compare(strings.ToLower(a.Name), strings.ToLower(b.Name)) })
 
@@ -165,6 +170,44 @@ func filmFormat(it *item) string {
 		return "120"
 	}
 	return "35mm"
+}
+
+// Wikidata only records a mount for Canon's gear, which would leave the mount filter useless for
+// everyone else. These read it off the model name instead — the first match wins, so the
+// medium format and screw mount lines come before the brand's usual bayonet.
+// ponytail: a lookup table of the mounts people actually shoot; an oddity like a Yashinon-DS
+// (M42, not Contax/Yashica) will be wrong until someone corrects it in their own copy.
+var mountRules = []struct {
+	what  *regexp.Regexp
+	mount string
+}{
+	{regexp.MustCompile(`(?i)Hasselblad`), "Hasselblad V"},
+	{regexp.MustCompile(`(?i)(Kiev 6|Kiev 88|Pentacon Six)`), "Pentacon Six"},
+	{regexp.MustCompile(`(?i)Pentax 6\s*x?\s*7|Pentax 67`), "Pentax 67"},
+	{regexp.MustCompile(`(?i)Pentax 645`), "Pentax 645"},
+	{regexp.MustCompile(`(?i)Pentax Auto 110`), "Pentax 110"},
+	{regexp.MustCompile(`(?i)(Takumar|Spotmatic|Asahiflex|Praktica|Praktiflex|Pentacon|Zenit|Helios|Industar|Jupiter|Asahi Pentax\b|Asahi Pentax (S|SV|H))`), "M42"},
+	{regexp.MustCompile(`(?i)(Exakta|\bExa\b)`), "Exakta"},
+	{regexp.MustCompile(`(?i)(Leicaflex|Leica R\b|-R\b)`), "Leica R"},
+	{regexp.MustCompile(`(?i)(Noctilux|Summicron-M|Summilux-M|Elmarit-M|Leica M\b)`), "Leica M"},
+	{regexp.MustCompile(`(?i)(Maxxum|Dynax|Minolta AF|^Sony)`), "Minolta A"},
+	{regexp.MustCompile(`(?i)(Rokkor|Minolta (SR|X-|XD|XE|XG|XK)|SR-T)`), "Minolta SR"},
+	{regexp.MustCompile(`(?i)(Zuiko|Olympus OM|Olympus IS)`), "Olympus OM"},
+	{regexp.MustCompile(`(?i)(Hexanon|Konica (Autoreflex|FS|FP|TC|T3))`), "Konica AR"},
+	{regexp.MustCompile(`(?i)(Contax|Yashica (FX|FR|FT))`), "Contax/Yashica"},
+	{regexp.MustCompile(`(?i)(Nikkor|^Nikon)`), "Nikon F"},
+	{regexp.MustCompile(`(?i)Yashinon-DS`), "M42"},
+	{regexp.MustCompile(`(?i)Pentax`), "Pentax K"}, // any position: "SMC Pentax-M", "HD Pentax DA"
+}
+
+func guessMount(it *item) string {
+	hay := it.Name + " " + it.Brand
+	for _, r := range mountRules {
+		if r.what.MatchString(hay) {
+			return r.mount
+		}
+	}
+	return ""
 }
 
 // digitalOnly names the mounts that never had film behind them.

@@ -1,5 +1,5 @@
 slug,name,brand,mount,film_format,focal_length_mm,max_aperture,introduced,filter_mm,weight_g,image,wikidata,commons_file,wikipedia,source
-smc-pentax-d-fa-50mm-f-2-8-macro,SMC Pentax-D FA 50mm f/2.8 Macro,Ricoh,,35mm,50,2.8,,,,images/ricoh/smc-pentax-d-fa-50mm-f-2-8-macro.jpg,Q7165080,Pentax D FA 50mm lens.jpg,https://en.wikipedia.org/wiki/Pentax_D_FA_50mm_lens,wikidata
-smc-pentax-da-300mm-f4-ed-if-sdm,SMC Pentax-DA* 300mm F4 ED [IF] SDM,Ricoh,,35mm,300,,,,,images/ricoh/smc-pentax-da-300mm-f4-ed-if-sdm.jpg,Q18387532,Pentax300TeleLens.jpg,https://en.wikipedia.org/wiki/Pentax_DA*_300mm_lens,wikidata
-smc-pentax-fa-31mm-1-1-8-al-limited,SMC Pentax-FA 31mm 1:1.8 AL Limited,Ricoh,,35mm,31,1.8,,,,images/ricoh/smc-pentax-fa-31mm-1-1-8-al-limited.jpg,Q18387545,Pentax SMC-FA 31mm f1.8 AL Limited.jpg,https://en.wikipedia.org/wiki/Pentax_FA_31mm_Limited_lens,wikidata
-smc-pentax-fa-77mm-f1-8-limited,SMC Pentax-FA 77mm F1.8 Limited,Ricoh,,35mm,77,1.8,,,,,Q25038216,,https://en.wikipedia.org/wiki/Pentax_FA_77mm_Limited_lens,wikidata
+smc-pentax-d-fa-50mm-f-2-8-macro,SMC Pentax-D FA 50mm f/2.8 Macro,Ricoh,Pentax K,35mm,50,2.8,,,,images/ricoh/smc-pentax-d-fa-50mm-f-2-8-macro.jpg,Q7165080,Pentax D FA 50mm lens.jpg,https://en.wikipedia.org/wiki/Pentax_D_FA_50mm_lens,wikidata
+smc-pentax-da-300mm-f4-ed-if-sdm,SMC Pentax-DA* 300mm F4 ED [IF] SDM,Ricoh,Pentax K,35mm,300,,,,,images/ricoh/smc-pentax-da-300mm-f4-ed-if-sdm.jpg,Q18387532,Pentax300TeleLens.jpg,https://en.wikipedia.org/wiki/Pentax_DA*_300mm_lens,wikidata
+smc-pentax-fa-31mm-1-1-8-al-limited,SMC Pentax-FA 31mm 1:1.8 AL Limited,Ricoh,Pentax K,35mm,31,1.8,,,,images/ricoh/smc-pentax-fa-31mm-1-1-8-al-limited.jpg,Q18387545,Pentax SMC-FA 31mm f1.8 AL Limited.jpg,https://en.wikipedia.org/wiki/Pentax_FA_31mm_Limited_lens,wikidata
+smc-pentax-fa-77mm-f1-8-limited,SMC Pentax-FA 77mm F1.8 Limited,Ricoh,Pentax K,35mm,77,1.8,,,,,Q25038216,,https://en.wikipedia.org/wiki/Pentax_FA_77mm_Limited_lens,wikidata

@@ -1,5 +1,5 @@
 slug,name,brand,mount,film_format,focal_length_mm,max_aperture,introduced,filter_mm,weight_g,image,wikidata,commons_file,wikipedia,source
 elmarit,Elmarit,Leica Camera,,35mm,,,,,,,Q1332878,,https://en.wikipedia.org/wiki/Elmarit,wikidata
-leica-noctilux-m-50mm-f-0-95-asph,Leica Noctilux-M 50mm f/0.95 ASPH,Leica Camera,,35mm,50,0.95,,,,images/leica-camera/leica-noctilux-m-50mm-f-0-95-asph.jpg,Q11753797,Point 95 (14513892487).jpg,,wikidata
-leica-summicron-m-1-2-35mm-asph,Leica Summicron-M 1:2/35mm ASPH.,Leica Camera,,35mm,35,,,,,images/leica-camera/leica-summicron-m-1-2-35mm-asph.jpg,Q3829992,Leica Summicron-M 35mm F2.0 Asph (L1008155).jpg,,wikidata
-noctilux,Noctilux,Leica Camera,,35mm,50-75,0.95,,,,images/leica-camera/noctilux.jpg,Q3877652,L1000329.jpg,https://en.wikipedia.org/wiki/Noctilux,wikidata
+leica-noctilux-m-50mm-f-0-95-asph,Leica Noctilux-M 50mm f/0.95 ASPH,Leica Camera,Leica M,35mm,50,0.95,,,,images/leica-camera/leica-noctilux-m-50mm-f-0-95-asph.jpg,Q11753797,Point 95 (14513892487).jpg,,wikidata
+leica-summicron-m-1-2-35mm-asph,Leica Summicron-M 1:2/35mm ASPH.,Leica Camera,Leica M,35mm,35,,,,,images/leica-camera/leica-summicron-m-1-2-35mm-asph.jpg,Q3829992,Leica Summicron-M 35mm F2.0 Asph (L1008155).jpg,,wikidata
+noctilux,Noctilux,Leica Camera,Leica M,35mm,50-75,0.95,,,,images/leica-camera/noctilux.jpg,Q3877652,L1000329.jpg,https://en.wikipedia.org/wiki/Noctilux,wikidata

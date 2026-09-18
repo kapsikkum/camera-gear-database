@@ -1,12 +1,12 @@
 slug,name,brand,type,mount,film_format,introduced,image,wikidata,commons_file,wikipedia,source
 minolta-110-zoom-slr,Minolta 110 Zoom SLR,Minolta,SLR,,110,,images/minolta/minolta-110-zoom-slr.jpg,Q6868989,Minolta110ZoomSLR 20130905.jpg,https://en.wikipedia.org/wiki/Minolta_110_Zoom_SLR,wikidata
 minolta-110-zoom-slr-mark-ii,Minolta 110 Zoom SLR Mark II,Minolta,SLR,,110,,images/minolta/minolta-110-zoom-slr-mark-ii.jpg,Q92322972,Minolta 110 Mk II.jpg,,wikidata
-minolta-dynax-7,Minolta Dynax 7,Minolta,SLR,,35mm,,images/minolta/minolta-dynax-7.jpg,Q78375100,Minolta Dynax 7 1.jpg,,wikidata
-minolta-maxxum-7000-af,Minolta Maxxum 7000 AF,Minolta,SLR,,35mm,,images/minolta/minolta-maxxum-7000-af.jpg,Q1411757,Minolta7000.jpg,https://en.wikipedia.org/wiki/Minolta_Maxxum_7000,wikidata
-minolta-sr-2,Minolta SR-2,Minolta,SLR,,35mm,,images/minolta/minolta-sr-2.jpg,Q4044329,Minolta SR-2A.JPG,https://en.wikipedia.org/wiki/Minolta_SR-2,wikidata
-minolta-sr-7,Minolta SR-7,Minolta,SLR,,35mm,,images/minolta/minolta-sr-7.jpg,Q4044327,Minolta SR-7(a) (13705953664).jpg,https://en.wikipedia.org/wiki/Minolta_SR-7,wikidata
-minolta-sr-t-101,Minolta SR-T 101,Minolta,SLR,,35mm,,images/minolta/minolta-sr-t-101.jpg,Q737724,Minolta srt 101 IMGP3035 wp.jpg,https://en.wikipedia.org/wiki/Minolta_SR-T_101,wikidata
-minolta-sr-t-303,Minolta SR-T 303,Minolta,SLR,,35mm,,images/minolta/minolta-sr-t-303.jpg,Q1937475,Appareil photo Minolta SR-T 303 avec 50 mm f1.7 0343.JPG,,wikidata
-minolta-x-1,Minolta X-1,Minolta,SLR,,35mm,,images/minolta/minolta-x-1.jpg,Q1937487,Minolta XM img 1822.jpg,https://en.wikipedia.org/wiki/Minolta_X-1,wikidata
-minolta-x-700,Minolta X-700,Minolta,SLR,,35mm,,images/minolta/minolta-x-700.jpg,Q4044333,Minolta X700 45degree.jpg,https://en.wikipedia.org/wiki/Minolta_X-700,wikidata
-minolta-xg-9,Minolta XG 9,Minolta,SLR,,35mm,,images/minolta/minolta-xg-9.jpg,Q130240280,Minolta XG 9 - 02.jpg,,wikidata
+minolta-dynax-7,Minolta Dynax 7,Minolta,SLR,Minolta A,35mm,,images/minolta/minolta-dynax-7.jpg,Q78375100,Minolta Dynax 7 1.jpg,,wikidata
+minolta-maxxum-7000-af,Minolta Maxxum 7000 AF,Minolta,SLR,Minolta A,35mm,,images/minolta/minolta-maxxum-7000-af.jpg,Q1411757,Minolta7000.jpg,https://en.wikipedia.org/wiki/Minolta_Maxxum_7000,wikidata
+minolta-sr-2,Minolta SR-2,Minolta,SLR,Minolta SR,35mm,,images/minolta/minolta-sr-2.jpg,Q4044329,Minolta SR-2A.JPG,https://en.wikipedia.org/wiki/Minolta_SR-2,wikidata
+minolta-sr-7,Minolta SR-7,Minolta,SLR,Minolta SR,35mm,,images/minolta/minolta-sr-7.jpg,Q4044327,Minolta SR-7(a) (13705953664).jpg,https://en.wikipedia.org/wiki/Minolta_SR-7,wikidata
+minolta-sr-t-101,Minolta SR-T 101,Minolta,SLR,Minolta SR,35mm,,images/minolta/minolta-sr-t-101.jpg,Q737724,Minolta srt 101 IMGP3035 wp.jpg,https://en.wikipedia.org/wiki/Minolta_SR-T_101,wikidata
+minolta-sr-t-303,Minolta SR-T 303,Minolta,SLR,Minolta SR,35mm,,images/minolta/minolta-sr-t-303.jpg,Q1937475,Appareil photo Minolta SR-T 303 avec 50 mm f1.7 0343.JPG,,wikidata
+minolta-x-1,Minolta X-1,Minolta,SLR,Minolta SR,35mm,,images/minolta/minolta-x-1.jpg,Q1937487,Minolta XM img 1822.jpg,https://en.wikipedia.org/wiki/Minolta_X-1,wikidata
+minolta-x-700,Minolta X-700,Minolta,SLR,Minolta SR,35mm,,images/minolta/minolta-x-700.jpg,Q4044333,Minolta X700 45degree.jpg,https://en.wikipedia.org/wiki/Minolta_X-700,wikidata
+minolta-xg-9,Minolta XG 9,Minolta,SLR,Minolta SR,35mm,,images/minolta/minolta-xg-9.jpg,Q130240280,Minolta XG 9 - 02.jpg,,wikidata

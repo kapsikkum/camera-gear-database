@@ -1,30 +1,30 @@
 slug,name,brand,type,mount,film_format,introduced,image,wikidata,commons_file,wikipedia,source
-narciss,Narciss,Zenit,SLR,,35mm,,images/zenit/narciss.jpg,Q4313510,White Narciss camera.JPG,https://en.wikipedia.org/wiki/Narciss,wikidata
-zenit-10,Zenit 10,Zenit,SLR,,35mm,,images/zenit/zenit-10.jpg,Q4191341,Зенит-10 фото1.JPG,,wikidata
-zenit-11,Zenit 11,Zenit,SLR,,35mm,,images/zenit/zenit-11.jpg,Q4191342,Camera Zenit 11.jpg,,wikidata
-zenit-12,Zenit 12,Zenit,SLR,,35mm,,images/zenit/zenit-12.jpg,Q4191343,Фотоаппарат Зенит-12сд.JPG,,wikidata
-zenit-122,Zenit 122,Zenit,SLR,,35mm,,images/zenit/zenit-122.jpg,Q4191349,Фотоаппарат Зенит-122.JPG,,wikidata
-zenit-130,Zenit 130,Zenit,SLR,,35mm,,images/zenit/zenit-130.jpg,Q4191346,Зенит-130.JPG,,wikidata
-zenit-16,Zenit 16,Zenit,SLR,,35mm,,images/zenit/zenit-16.jpg,Q4191350,Фотоаппарат Зенит-16.jpg,,wikidata
-zenit-18,Zenit 18,Zenit,SLR,,35mm,,images/zenit/zenit-18.jpg,Q4191351,Фотоаппарат Зенит-18.jpg,,wikidata
-zenit-19,Zenit 19,Zenit,SLR,,35mm,,images/zenit/zenit-19.jpg,Q4191352,Зенит-19 фото1.JPG,,wikidata
-zenit-21,Zenit 21,Zenit,SLR,,35mm,,images/zenit/zenit-21.jpg,Q4191357,Zenit 21XS camera from Evgeniy Okolov collection.JPG,,wikidata
-zenit-212k,Zenit 212k,Zenit,SLR,,35mm,,images/zenit/zenit-212k.jpg,Q4191355,Зенит-212к.jpg,,wikidata
-zenit-3,Zenit 3,Zenit,SLR,,35mm,,images/zenit/zenit-3.jpg,Q4191358,Зенит-3 ф1.JPG,,wikidata
-zenit-312,Zenit 312,Zenit,SLR,,35mm,,images/zenit/zenit-312.jpg,Q4191359,Zenit-312m.jpg,,wikidata
-zenit-3m,Zenit 3m,Zenit,SLR,,35mm,,images/zenit/zenit-3m.jpg,Q4191362,Фотокамера Зенит-3М.jpg,,wikidata
-zenit-412,Zenit 412,Zenit,SLR,,35mm,,images/zenit/zenit-412.jpg,Q4191364,Zenit-412dx.jpg,,wikidata
-zenit-5,Zenit 5,Zenit,SLR,,35mm,,images/zenit/zenit-5.jpg,Q4191366,Фотоаппарат Зенит-5.jpg,,wikidata
-zenit-510,Zenit 510,Zenit,SLR,,35mm,,images/zenit/zenit-510.jpg,Q4191367,Zenit 510 2.jpg,,wikidata
-zenit-610,Zenit 610,Zenit,SLR,,35mm,,images/zenit/zenit-610.jpg,Q4191371,Зенит 610.jpg,,wikidata
-zenit-7,Zenit 7,Zenit,SLR,,35mm,,images/zenit/zenit-7.jpg,Q4191373,Zenit-7 5837.jpg,,wikidata
-zenit-am,Zenit am,Zenit,SLR,,35mm,,images/zenit/zenit-am.jpg,Q4191375,Зенит-АМ фото1.JPG,,wikidata
-zenit-avtomat,Zenit avtomat,Zenit,SLR,,35mm,,images/zenit/zenit-avtomat.jpg,Q4191378,Camera Zenit avtomat.jpg,,wikidata
-zenit-b,Zenit B,Zenit,SLR,,35mm,,images/zenit/zenit-b.jpg,Q4191377,Zenit-B Helios-44-2 2012 G1.jpg,https://en.wikipedia.org/wiki/Zenit_B,wikidata
-zenit-bm,Zenit BM,Zenit,SLR,,35mm,,images/zenit/zenit-bm.jpg,Q4191379,Зенит ВМ.jpg,,wikidata
-zenit-e,Zenit E,Zenit,SLR,,35mm,,images/zenit/zenit-e.jpg,Q4191386,2024 Zenit-E (2).jpg,,wikidata
-zenit-em,Zenit EM,Zenit,SLR,,35mm,,images/zenit/zenit-em.jpg,Q4191383,Zenit EM.jpg,,wikidata
-zenit-et,Zenit ET,Zenit,SLR,,35mm,,images/zenit/zenit-et.jpg,Q4191384,Зенит-ЕТ с объективом Индустар-50.JPG,,wikidata
-zenit-km,Zenit KM,Zenit,SLR,,35mm,,images/zenit/zenit-km.jpg,Q4191385,Зенит-КМ.jpg,,wikidata
-zenit-ttl,Zenit TTL,Zenit,SLR,,35mm,,images/zenit/zenit-ttl.jpg,Q4191374,Zenit TTL (front top).jpg,,wikidata
-zenit-1,Zenit №1,Zenit,SLR,,35mm,,images/zenit/zenit-1.jpg,Q4191395,Zenit (458841015).jpg,,wikidata
+narciss,Narciss,Zenit,SLR,M42,35mm,,images/zenit/narciss.jpg,Q4313510,White Narciss camera.JPG,https://en.wikipedia.org/wiki/Narciss,wikidata
+zenit-10,Zenit 10,Zenit,SLR,M42,35mm,,images/zenit/zenit-10.jpg,Q4191341,Зенит-10 фото1.JPG,,wikidata
+zenit-11,Zenit 11,Zenit,SLR,M42,35mm,,images/zenit/zenit-11.jpg,Q4191342,Camera Zenit 11.jpg,,wikidata
+zenit-12,Zenit 12,Zenit,SLR,M42,35mm,,images/zenit/zenit-12.jpg,Q4191343,Фотоаппарат Зенит-12сд.JPG,,wikidata
+zenit-122,Zenit 122,Zenit,SLR,M42,35mm,,images/zenit/zenit-122.jpg,Q4191349,Фотоаппарат Зенит-122.JPG,,wikidata
+zenit-130,Zenit 130,Zenit,SLR,M42,35mm,,images/zenit/zenit-130.jpg,Q4191346,Зенит-130.JPG,,wikidata
+zenit-16,Zenit 16,Zenit,SLR,M42,35mm,,images/zenit/zenit-16.jpg,Q4191350,Фотоаппарат Зенит-16.jpg,,wikidata
+zenit-18,Zenit 18,Zenit,SLR,M42,35mm,,images/zenit/zenit-18.jpg,Q4191351,Фотоаппарат Зенит-18.jpg,,wikidata
+zenit-19,Zenit 19,Zenit,SLR,M42,35mm,,images/zenit/zenit-19.jpg,Q4191352,Зенит-19 фото1.JPG,,wikidata
+zenit-21,Zenit 21,Zenit,SLR,M42,35mm,,images/zenit/zenit-21.jpg,Q4191357,Zenit 21XS camera from Evgeniy Okolov collection.JPG,,wikidata
+zenit-212k,Zenit 212k,Zenit,SLR,M42,35mm,,images/zenit/zenit-212k.jpg,Q4191355,Зенит-212к.jpg,,wikidata
+zenit-3,Zenit 3,Zenit,SLR,M42,35mm,,images/zenit/zenit-3.jpg,Q4191358,Зенит-3 ф1.JPG,,wikidata
+zenit-312,Zenit 312,Zenit,SLR,M42,35mm,,images/zenit/zenit-312.jpg,Q4191359,Zenit-312m.jpg,,wikidata
+zenit-3m,Zenit 3m,Zenit,SLR,M42,35mm,,images/zenit/zenit-3m.jpg,Q4191362,Фотокамера Зенит-3М.jpg,,wikidata
+zenit-412,Zenit 412,Zenit,SLR,M42,35mm,,images/zenit/zenit-412.jpg,Q4191364,Zenit-412dx.jpg,,wikidata
+zenit-5,Zenit 5,Zenit,SLR,M42,35mm,,images/zenit/zenit-5.jpg,Q4191366,Фотоаппарат Зенит-5.jpg,,wikidata
+zenit-510,Zenit 510,Zenit,SLR,M42,35mm,,images/zenit/zenit-510.jpg,Q4191367,Zenit 510 2.jpg,,wikidata
+zenit-610,Zenit 610,Zenit,SLR,M42,35mm,,images/zenit/zenit-610.jpg,Q4191371,Зенит 610.jpg,,wikidata
+zenit-7,Zenit 7,Zenit,SLR,M42,35mm,,images/zenit/zenit-7.jpg,Q4191373,Zenit-7 5837.jpg,,wikidata
+zenit-am,Zenit am,Zenit,SLR,M42,35mm,,images/zenit/zenit-am.jpg,Q4191375,Зенит-АМ фото1.JPG,,wikidata
+zenit-avtomat,Zenit avtomat,Zenit,SLR,M42,35mm,,images/zenit/zenit-avtomat.jpg,Q4191378,Camera Zenit avtomat.jpg,,wikidata
+zenit-b,Zenit B,Zenit,SLR,M42,35mm,,images/zenit/zenit-b.jpg,Q4191377,Zenit-B Helios-44-2 2012 G1.jpg,https://en.wikipedia.org/wiki/Zenit_B,wikidata
+zenit-bm,Zenit BM,Zenit,SLR,M42,35mm,,images/zenit/zenit-bm.jpg,Q4191379,Зенит ВМ.jpg,,wikidata
+zenit-e,Zenit E,Zenit,SLR,M42,35mm,,images/zenit/zenit-e.jpg,Q4191386,2024 Zenit-E (2).jpg,,wikidata
+zenit-em,Zenit EM,Zenit,SLR,M42,35mm,,images/zenit/zenit-em.jpg,Q4191383,Zenit EM.jpg,,wikidata
+zenit-et,Zenit ET,Zenit,SLR,M42,35mm,,images/zenit/zenit-et.jpg,Q4191384,Зенит-ЕТ с объективом Индустар-50.JPG,,wikidata
+zenit-km,Zenit KM,Zenit,SLR,M42,35mm,,images/zenit/zenit-km.jpg,Q4191385,Зенит-КМ.jpg,,wikidata
+zenit-ttl,Zenit TTL,Zenit,SLR,M42,35mm,,images/zenit/zenit-ttl.jpg,Q4191374,Zenit TTL (front top).jpg,,wikidata
+zenit-1,Zenit №1,Zenit,SLR,M42,35mm,,images/zenit/zenit-1.jpg,Q4191395,Zenit (458841015).jpg,,wikidata

@@ -98,3 +98,23 @@ func TestFilmlessDropsJunk(t *testing.T) {
 		t.Errorf("Polaroid SX-70: %q", got)
 	}
 }
+
+func TestGuessMount(t *testing.T) {
+	for _, c := range []struct{ name, brand, want string }{
+		{"Nikon F3", "Nikon", "Nikon F"},
+		{"Nikon AF DC-Nikkor 105mm f/2D", "Nikon", "Nikon F"},
+		{"Pentax K1000", "Pentax", "Pentax K"},
+		{"Pentax 67II", "Pentax", "Pentax 67"},
+		{"Asahi Pentax Spotmatic", "Pentax", "M42"},
+		{"Zenit E", "Zenit", "M42"},
+		{"Minolta SR-T 101", "Minolta", "Minolta SR"},
+		{"Minolta Maxxum 7000 AF", "Minolta", "Minolta A"},
+		{"Olympus OM-1", "Olympus", "Olympus OM"},
+		{"Hasselblad 500C/M", "Hasselblad", "Hasselblad V"},
+		{"Sigma 24mm F1.4 DG HSM Art", "Sigma", ""}, // third party, mount unknown
+	} {
+		if got := guessMount(&item{Name: c.name, Brand: c.brand}); got != c.want {
+			t.Errorf("%s: got %q, want %q", c.name, got, c.want)
+		}
+	}
+}

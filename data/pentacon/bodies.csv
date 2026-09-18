@@ -1,7 +1,7 @@
 slug,name,brand,type,mount,film_format,introduced,image,wikidata,commons_file,wikipedia,source
-pentacon-six,Pentacon Six,Pentacon,SLR,,120,,images/pentacon/pentacon-six.jpg,Q316907,Pentagon SIX TTL.jpg,https://en.wikipedia.org/wiki/Pentacon_Six,wikidata
-praktica-ee-2,Praktica EE 2,Pentacon,SLR,,35mm,,images/pentacon/praktica-ee-2.jpg,Q2107642,"DDR, Foto, Kamera, 'PRAKTICA' EE2, Spiegelreflex, Vollautomatik, schwarz, mit 2.8-29mm, IMGP2832, Kamera, von Rechts Vorn.jpg",https://en.wikipedia.org/wiki/Praktica_EE2,wikidata
-praktica-l,Praktica L,Pentacon,SLR,,35mm,,images/pentacon/praktica-l.jpg,Q2107645,Praktica L2 Vorderseite.jpg,,wikidata
-praktica-llc,Praktica LLC,Pentacon,SLR,,35mm,,,Q2107647,,,wikidata
-praktica-mtl-5,Praktica MTL 5,Pentacon,SLR,,35mm,,images/pentacon/praktica-mtl-5.jpg,Q111141644,TAG Praktica MTL5 Pentacon 01.jpg,,wikidata
-praktica-mtl3,Praktica MTL3,Pentacon,SLR,,35mm,,images/pentacon/praktica-mtl3.jpg,Q56299023,Praktica MTL-3.jpg,,wikidata
+pentacon-six,Pentacon Six,Pentacon,SLR,Pentacon Six,120,,images/pentacon/pentacon-six.jpg,Q316907,Pentagon SIX TTL.jpg,https://en.wikipedia.org/wiki/Pentacon_Six,wikidata
+praktica-ee-2,Praktica EE 2,Pentacon,SLR,M42,35mm,,images/pentacon/praktica-ee-2.jpg,Q2107642,"DDR, Foto, Kamera, 'PRAKTICA' EE2, Spiegelreflex, Vollautomatik, schwarz, mit 2.8-29mm, IMGP2832, Kamera, von Rechts Vorn.jpg",https://en.wikipedia.org/wiki/Praktica_EE2,wikidata
+praktica-l,Praktica L,Pentacon,SLR,M42,35mm,,images/pentacon/praktica-l.jpg,Q2107645,Praktica L2 Vorderseite.jpg,,wikidata
+praktica-llc,Praktica LLC,Pentacon,SLR,M42,35mm,,,Q2107647,,,wikidata
+praktica-mtl-5,Praktica MTL 5,Pentacon,SLR,M42,35mm,,images/pentacon/praktica-mtl-5.jpg,Q111141644,TAG Praktica MTL5 Pentacon 01.jpg,,wikidata
+praktica-mtl3,Praktica MTL3,Pentacon,SLR,M42,35mm,,images/pentacon/praktica-mtl3.jpg,Q56299023,Praktica MTL-3.jpg,,wikidata

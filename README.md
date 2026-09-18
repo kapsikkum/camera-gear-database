@@ -26,7 +26,11 @@ commons_file, wikipedia, source`
 filter_mm, weight_g, image, wikidata, commons_file, wikipedia, source`. Zooms give their range as
 `100-200`; `max_aperture` is the widest f-number, so `1.4` means f/1.4.
 
-`film_format` is `35mm`, `120`, `APS` or `sheet`, read off the model name and mount — a Pentax 6x7 or
+`mount` comes from Wikidata where it knows one (Canon, mostly) and otherwise from the model name:
+a Spotmatic is M42, a Rokkor is Minolta SR, an SMC Pentax-M is Pentax K. Third-party lenses that
+shipped in several mounts are left blank.
+
+`film_format` is `35mm`, `120`, `110`, `APS`, `instant` or `sheet`, read off the model name and mount — a Pentax 6x7 or
 Mamiya 645 is medium format, everything else is assumed 35mm, so odd names (a Rollei 6008) can be
 wrong. `slug` is a stable id made from the name. `source` says whether a row came from Wikidata or
 Wikipedia.
