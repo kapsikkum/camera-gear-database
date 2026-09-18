@@ -1,7 +1,8 @@
 # Camera gear database
 
 An open database of camera bodies and lenses, with a picture of each, built for film photography apps.
-Canon first; other brands can follow the same shape.
+Canon first; other brands can follow the same shape. Film gear only: digital bodies and the
+crop-sensor lenses that will not mount on a 35mm camera (EF-S, EF-M, RF-S) are left out.
 
 Everything here is generated from [Wikidata](https://www.wikidata.org/) and English Wikipedia by the
 scraper in `scrape/`, so it can be rebuilt and kept current.
@@ -10,8 +11,8 @@ scraper in `scrape/`, so it can be rebuilt and kept current.
 
 | File | Rows |
 | --- | --- |
-| `data/canon/bodies.csv` | Canon SLR and DSLR bodies |
-| `data/canon/lenses.csv` | Canon lenses (FD, FL, R, EF, EF-S, EF-M, RF) |
+| `data/canon/bodies.csv` | Canon film SLR bodies |
+| `data/canon/lenses.csv` | Canon lenses (FD, FL, R, EF, RF) |
 | `images/canon/*.jpg` | One photo per model, up to 900px wide |
 | `images/CREDITS.csv` | Author and licence of every image |
 

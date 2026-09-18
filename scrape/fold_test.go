@@ -27,3 +27,22 @@ func TestFold(t *testing.T) {
 		t.Error("the folded-away entry's article was lost")
 	}
 }
+
+func TestFilmless(t *testing.T) {
+	for _, c := range []struct {
+		it   item
+		want bool
+	}{
+		{item{Name: "Canon EOS 5D Mark IV", Kind: "body", Digital: true}, true},
+		{item{Name: "Canon EOS 300", Kind: "body"}, false},
+		{item{Name: "Canon EF-M", Kind: "body"}, false}, // a 1991 film SLR, not the mount
+		{item{Name: "EF-S18-55mm f/3.5-5.6 USM", Kind: "lens"}, true},
+		{item{Name: "Canon RF-S 18-45mm F4.5-6.3 IS STM", Kind: "lens"}, true},
+		{item{Name: "Canon zoom lens", Kind: "lens", Mounts: []string{"Canon EF-S lens mount"}}, true},
+		{item{Name: "Canon EF 50mm F1.8", Kind: "lens", Mounts: []string{"Canon EF lens mount"}}, false},
+	} {
+		if got := filmless(&c.it); got != c.want {
+			t.Errorf("%s: got %v, want %v", c.it.Name, got, c.want)
+		}
+	}
+}

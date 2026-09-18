@@ -93,6 +93,7 @@ func main() {
 		}
 	}
 	items = fold(items)
+	items = slices.DeleteFunc(items, filmless)
 	slices.SortFunc(items, func(a, b *item) int { return strings.Compare(strings.ToLower(a.Name), strings.ToLower(b.Name)) })
 
 	if !*skipImages {
@@ -179,6 +180,18 @@ func fetchItems(b brand) ([]*item, error) {
 	})
 	slices.SortFunc(items, func(a, b *item) int { return strings.Compare(strings.ToLower(a.Name), strings.ToLower(b.Name)) })
 	return items, nil
+}
+
+// cropMount names the mounts that only ever had a digital body behind them.
+var cropMount = regexp.MustCompile(`(?i)\b(EF-S|EF-M|RF-S)`) // "EF-S18-55mm" runs the two together
+
+// filmless reports gear no film camera can use: digital bodies, and the crop-sensor lenses
+// that physically will not mount on a 35mm body.
+func filmless(it *item) bool {
+	if it.Kind == "body" {
+		return it.Digital
+	}
+	return cropMount.MatchString(it.Name) || slices.ContainsFunc(it.Mounts, cropMount.MatchString)
 }
 
 var (
