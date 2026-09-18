@@ -92,6 +92,7 @@ func main() {
 			log.Printf("Wikipedia %s: %d rows, %d new models", src.what, len(rows), len(items)-before)
 		}
 	}
+	items = fold(items)
 	slices.SortFunc(items, func(a, b *item) int { return strings.Compare(strings.ToLower(a.Name), strings.ToLower(b.Name)) })
 
 	if !*skipImages {
@@ -140,7 +141,11 @@ func fetchItems(b brand) ([]*item, error) {
 		qid := val("item")[strings.LastIndex(val("item"), "/")+1:]
 		it := byQID[qid]
 		if it == nil {
-			it = &item{QID: qid, Name: strings.TrimSpace(val("itemLabel")), Kind: val("kind"), Digital: val("digital") == "true", Source: "wikidata"}
+			name := strings.TrimSpace(val("itemLabel"))
+			if val("kind") == "body" {
+				name = strings.TrimSuffix(name, " camera") // "Canon EF camera" is the Canon EF
+			}
+			it = &item{QID: qid, Name: name, Kind: val("kind"), Digital: val("digital") == "true", Source: "wikidata"}
 			byQID[qid] = it
 			items = append(items, it)
 		}
@@ -174,6 +179,44 @@ func fetchItems(b brand) ([]*item, error) {
 	})
 	slices.SortFunc(items, func(a, b *item) int { return strings.Compare(strings.ToLower(a.Name), strings.ToLower(b.Name)) })
 	return items, nil
+}
+
+var (
+	// "Canon EF 24-105mm lens" is Wikidata's article about every 24-105 Canon made, not a model.
+	genericName = regexp.MustCompile(`(?i)^(.*)\s+lens$`)
+	focalPrefix = regexp.MustCompile(`(?i)^(.*?\d[\d.]*(?:\s*-\s*[\d.]+)?\s*mm)`)
+)
+
+// fold drops the vague entries that name a focal length rather than a model, once a real model
+// with that focal length is in the database. What the vague entry knew is kept.
+func fold(items []*item) []*item {
+	dashes := strings.NewReplacer("–", "-", "—", "-")
+	group := func(name string) string {
+		m := focalPrefix.FindStringSubmatch(dashes.Replace(name))
+		if m == nil {
+			return ""
+		}
+		return strings.ToLower(strings.Join(strings.Fields(m[1]), ""))
+	}
+	specific := map[string][]*item{}
+	for _, it := range items {
+		it.Name = dashes.Replace(it.Name)
+		if g := group(it.Name); g != "" && !genericName.MatchString(it.Name) {
+			specific[g] = append(specific[g], it)
+		}
+	}
+	return slices.DeleteFunc(items, func(it *item) bool {
+		real := specific[group(it.Name)]
+		if !genericName.MatchString(it.Name) || len(real) == 0 {
+			return false
+		}
+		for _, r := range real {
+			if r.Wikipedia == "" {
+				r.Wikipedia = it.Wikipedia
+			}
+		}
+		return true
+	})
 }
 
 var seriesName = regexp.MustCompile(`(?i)\b(series|family|lens mount|mount)$`)
@@ -260,6 +303,16 @@ func fetchImages(items []*item, out, brandDir string, width int) error {
 			credits = append(credits, []string{it.Image, it.Name, it.CommonsFile, meta("Artist"), meta("LicenseShortName"), meta("LicenseUrl"), info.DescriptionURL})
 		}
 		log.Printf("images %d/%d", min(start+25, len(pending)), len(pending))
+	}
+	keep := map[string]bool{}
+	for _, it := range items {
+		keep[filepath.Base(it.Image)] = true
+	}
+	entries, _ := os.ReadDir(dir)
+	for _, e := range entries {
+		if !e.IsDir() && !keep[e.Name()] {
+			os.Remove(filepath.Join(dir, e.Name()))
+		}
 	}
 	slices.SortFunc(credits[1:], func(a, b []string) int { return strings.Compare(a[0], b[0]) })
 	return writeCSV(filepath.Join(out, "images", "CREDITS.csv"), credits)
